@@ -22,9 +22,9 @@ const Hero = () => {
   />
 
   {/* Content above background */}
-  <div className="relative z-10 flex flex-col items-center justify-start min-h-screen text-center px-4 pt-[320px]">
-    <h1 className="text-white text-6xl font-Futura font-bold leading-tight">
-      Leaders in Maritime <br /> Solutions and Services
+  <div className="relative z-10 flex flex-col items-center justify-start min-h-screen text-center px-4 pt-[330px]">
+    <h1 className="text-white text-6xl font-Futura  leading-tight">
+     <b> LEADERS IN MARITIME <br /> SOLUTIONS AND SERVICES </b>
     </h1>
     <div className="absolute bottom-10 text-white text-center animate-bounce">
       <p className="text-sm font-light">Learn More</p>

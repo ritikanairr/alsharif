@@ -1,37 +1,35 @@
-
 import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 
 const Services = () => {
   const { service } = useParams<{ service: string }>();
-  
-  // Set default service if none is specified
+  const navigate = useNavigate();
+
+  // Redirect to default service if none provided
   useEffect(() => {
     if (!service) {
-      window.history.replaceState({}, '', '/services/shipping-agency');
+      navigate('/services/shipping-agency', { replace: true });
     }
-  }, [service]);
+  }, [service, navigate]);
 
-  // Sidebar navigation links
   const sidebarLinks = [
     { id: 'shipping-agency', label: 'Shipping Agency' },
     { id: 'freight-forwarding', label: 'Freight Forwarding' },
     { id: 'ship-chandling', label: 'Ship Chandling' },
-    { id: 'ships-support', label: 'Ship\'s Support Services' },
+    { id: 'ships-support', label: "Ship's Support Services" },
     { id: 'stevedoring', label: 'Stevedoring Services' },
   ];
 
-  // Content based on service
   const renderContent = () => {
     switch (service) {
       case 'shipping-agency':
         return (
           <div className="animate-fade-in">
-            <h2 className="text-2xl font-bold mb-6 ">Shipping Agency</h2>
+            <h2 className="text-2xl font-bold mb-6">Shipping Agency</h2>
             <div className="mb-6">
-              <img 
-                src="/images/shipping-agency-large.jpg" 
-                alt="Shipping Agency Services" 
+              <img
+                src="/images/shipping-agency-large.jpg"
+                alt="Shipping Agency Services"
                 className="w-full rounded-lg mb-6"
               />
             </div>
@@ -62,9 +60,9 @@ const Services = () => {
           <div className="animate-fade-in">
             <h2 className="text-2xl font-bold mb-6">Freight Forwarding</h2>
             <div className="mb-6">
-              <img 
-                src="/images/freight-forwarding-large.jpg" 
-                alt="Freight Forwarding Services" 
+              <img
+                src="/images/freight-forwarding-large.jpg"
+                alt="Freight Forwarding Services"
                 className="w-full rounded-lg mb-6"
               />
             </div>
@@ -90,7 +88,6 @@ const Services = () => {
             </ul>
           </div>
         );
-      // Add other service sections as needed
       default:
         return (
           <div className="text-center py-10">
