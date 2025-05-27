@@ -11,7 +11,6 @@ const About = () => {
     <section className="bg-[#F3787B] py-20 px-6 md:px-20 text-white font-bold font-Futura">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-12">
         
-        {/* Left Text Section */}
         <motion.div
           className="flex-1"
           variants={fadeUp}
@@ -49,7 +48,6 @@ const About = () => {
           </motion.p>
         </motion.div>
 
-        {/* Right Image Section */}
         <motion.div
           className="flex-1 relative h-screen"
           variants={fadeUp}
@@ -72,4 +70,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About; 
