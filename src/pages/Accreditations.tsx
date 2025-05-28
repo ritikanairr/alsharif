@@ -5,7 +5,7 @@ const Accreditations = () => {
     {
       id: 1,
       name: 'ISO 9001:2015',
-      logo: '/images/iso-logo.png',
+      logo: '/images/iso.png',
       description: 'Al Sharif Group is an ISO 9001:2015 accredited company, demonstrating our commitment to quality management systems and continuous improvement.'
     },
     {

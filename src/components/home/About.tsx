@@ -8,7 +8,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section className="bg-[#F3787B] py-20 px-6 md:px-20 text-white font-bold font-Futura">
+    <section className="bg-[#F3787B] py-19 px-6 md:px-20 text-white font-bold font-Futura">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-12">
         
         <motion.div

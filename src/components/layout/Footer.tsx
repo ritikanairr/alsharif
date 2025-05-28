@@ -1,10 +1,15 @@
-
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white pt-12 pb-6">
-      <div className="container mx-auto px-4">
+    <footer className="relative text-white pt-12 pb-6 overflow-hidden font-Futura">
+      {/* Background Layer */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-black"
+      ></div>
+
+      {/* Content Layer */}
+      <div className="relative container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -75,7 +80,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="mt-12 pt-4 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} Al Sharif Group. All rights reserved.</p>
+          <p className="text-white">© {new Date().getFullYear()} Al Sharif Group. All rights reserved.</p>
         </div>
       </div>
     </footer>

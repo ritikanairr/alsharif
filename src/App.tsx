@@ -18,6 +18,7 @@ import Accreditations from "./pages/Accreditations";
 import RelatedInfo from "./pages/RelatedInfo";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
+import ServiceCTA from "./pages/contact";
 
 import LoadingScreen from "./components/home/LoadingScreen";
 
@@ -48,6 +49,7 @@ const App = () => {
                 <Route path="/profile/:section" element={<Profile />} />
                 <Route path="/services" element={<Services />} /> 
                 <Route path="/services/:service" element={<Services />} />
+                <Route path="/contact:" element={<ServiceCTA />} />
                 <Route path="/accreditations" element={<Accreditations />} />
                 <Route path="/related-info" element={<RelatedInfo />} />
                 <Route path="/contact-us" element={<ContactUs />} />

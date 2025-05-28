@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 
+
 const Services = () => {
   const { service } = useParams<{ service: string }>();
   const navigate = useNavigate();
@@ -125,6 +126,7 @@ const Services = () => {
           {renderContent()}
         </div>
       </div>
+      
     </div>
   );
 };
