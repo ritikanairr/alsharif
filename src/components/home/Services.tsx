@@ -50,8 +50,8 @@ const ShipModel = () => {
       ref={ref}
       object={ship.scene}
       scale={0.4}
-      position={[17, -4, 3]}
-      rotation={[0, 11.05, 0]}
+      position={[16, -3, 1]}
+      rotation={[0, 10.89, 0]}
     />
   );
 };
@@ -65,7 +65,7 @@ const CameraController = ({ scrollY }: { scrollY: number }) => {
     const camera = controlsRef.current.object;
     const target = controlsRef.current.target;
 
-    const panX = scrollY * 0.01;
+    const panX = scrollY * 0.006;
 
     camera.position.x = panX;
     target.x = panX;
