@@ -8,7 +8,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section className="bg-[#F3787B] py-19 px-6 md:px-20 text-white font-bold font-Futura">
+    <section className="bg-[#0A5D57] py-19 px-6 md:px-20 text-white">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center gap-12">
         
         <motion.div
@@ -20,7 +20,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.h1
-            className="text-5xl md:text-7xl font-Futura leading-tight mb-3"
+            className="text-5xl md:text-7xl font-Futura text-white leading-tight mb-3"
             variants={fadeUp}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
@@ -40,7 +40,7 @@ const About = () => {
           />
 
           <motion.p
-            className="text-lg md:text-2xl leading-relaxed font-bold mt-16"
+            className="text-lg md:text-2xl text-white leading-relaxed mt-16 font-Roboto"
             variants={fadeUp}
             transition={{ duration: 0.8, delay: 0.3 }}
           >

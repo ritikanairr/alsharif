@@ -20,6 +20,7 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				Futura: ['Futura'],
+				roboto: ['Roboto'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

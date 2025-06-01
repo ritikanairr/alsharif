@@ -133,8 +133,8 @@ const ShipCanvas = () => {
   });
 
   return (
-    <div className="h-[160vh] bg-[#E0F7FA]">
-      <div className="sticky top-0 h-[160vh] w-full overflow-hidden touch-none">
+    <div className="h-[150vh] bg-[#008576]">
+      <div className="sticky top-0 h-[150vh] w-full overflow-hidden touch-none">
         <div className="relative w-full h-full">
           <Canvas camera={{ position: [0, 5, 30], fov: 45 }}>
             <ambientLight intensity={0.6} />
@@ -148,22 +148,21 @@ const ShipCanvas = () => {
             initial="hidden"
             animate={containerInView ? "visible" : "hidden"}
             variants={containerVariants}
-            className="absolute top-[10%] left-[3%] md:left-[5%] z-10 p-4 md:p-6 rounded-lg max-w-[90%] md:max-w-[600px]"
+            className="absolute top-[2%] left-[3%] md:left-[5%] z-10 p-4 md:p-6 rounded-lg max-w-[90%] md:max-w-[600px]"
           >
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-Futura leading-tight mb-3 text-black whitespace-nowrap"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-Futura leading-tight mb-3 text-white whitespace-nowrap"
             >
               Our Services
             </motion.h1>
 
             <motion.hr
               variants={itemVariants}
-              className="w-[200%] sm:w-[250%] md:w-[280%] text-left ml-0 mt-2 mb-6 md:mb-8 border-none h-[3px] md:h-[5px] bg-black"
+              className="w-[200%] sm:w-[250%] md:w-[280%] text-left ml-0 mt-2 mb-6 md:mb-8 border-none h-[3px] md:h-[5px] bg-white"
             />
 
             <div className="relative">
-              {/* Line and Dots aligned in same space */}
               <div className="absolute left-2.5 md:left-[24.3px] top-0 bottom-0 w-0.5 bg-black z-0"></div>
 
               <div className="space-y-6 md:space-y-8">
@@ -182,20 +181,18 @@ const ShipCanvas = () => {
                       animate={itemInView ? "visible" : "hidden"}
                       className="relative flex items-start"
                     >
-                      {/* Dot */}
                       <div className="z-10 w-4 h-4 bg-black rounded-full flex-shrink-0 relative left-2.5 md:left-[18px]"></div>
 
-                      {/* Content */}
                       <div className="ml-6 md:ml-8 flex-grow">
-                        <div className="bg-white p-3 md:p-4 rounded-lg shadow-md max-w-xs md:max-w-md">
+                        <div className="bg-white p-3 md:p-4 rounded-2xl shadow-md max-w-xs md:max-w-md">
                           <h3 className="text-lg md:text-xl font-bold mb-2 text-black">{service.title}</h3>
                           <p className="text-gray-600 mb-3 text-xs md:text-sm leading-relaxed">{service.description}</p>
                           <Button
                             variant="ghost"
-                            className="text-red-600 p-0 hover:bg-transparent group text-xs md:text-sm"
+                            className="text-[#56918D] p-0 hover:bg-transparent group text-xs md:text-sm"
                             onClick={() => handleLearnMore(service.path)}
                           >
-                            <span className="group-hover:underline">Learn More</span>
+                            <span className="group-hover:underline">View More</span>
                             <ArrowRight className="ml-1 w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
                           </Button>
                         </div>
@@ -206,6 +203,14 @@ const ShipCanvas = () => {
               </div>
             </div>
 
+            <div className="mt-6 flex justify-center bg-red">
+              <button
+                onClick={() => navigate('/services')}
+                className="bg-[#4E8A77] text-white text-lg font-medium py-2 px-6 font-Futura rounded-full hover:bg-gray-200 transition"
+              >
+                View All Services
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>

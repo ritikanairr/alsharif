@@ -40,14 +40,14 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center bg-white/90 backdrop-blur-sm border-2 border-black rounded-lg px-4 py-2">
-            <div className="w-33 h-10 mr-2">
-              <img src="/images/alsharif.png" alt="Al Sharif Group Flag Logo" className="w-full h-full object-contain" />
+          <Link to="/" className="flex items-center bg-white/90 border-black border-2 backdrop-blur-sm rounded-2xl px-4 py-1">
+            <div className="w-[170px] h-9 mr-2 ">
+              <img src="/images/alsharif.png" alt="Al Sharif Group Flag Logo" className="w-full h-full object-cover" />
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm border-2 border-black rounded-lg px-6 py-2">
+          <nav className="hidden md:flex items-center bg-white/90 backdrop-blur-sm rounded-2xl px-6 py-2 border-black border-2">
             <div className="flex items-center space-x-6">
               <Link to="/" className={`nav-link font-bold text-black hover:text-sharif-red ${isActive('/') ? 'active' : ''}`}>
                 Home
@@ -78,7 +78,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="p-2 bg-white/90 backdrop-blur-sm border-2 border-gray-300 rounded-lg"
+              className="p-2 bg-white/90 backdrop-blur-sm rounded-lg"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {menuOpen ? (
@@ -93,7 +93,7 @@ const Navbar = () => {
 
         {/* Mobile Nav */}
         {menuOpen && (
-          <div className="mt-4 flex flex-col bg-white/90 backdrop-blur-sm border-2 border-black rounded-lg p-4 space-y-4 md:hidden">
+          <div className="mt-4 flex flex-col bg-white/90 backdrop-blur-sm rounded-lg p-4 space-y-4 md:hidden">
             <Link to="/" className={`font-bold text-black hover:text-sharif-red ${isActive('/') ? 'text-sharif-red' : ''}`} onClick={() => setMenuOpen(false)}>
               Home
             </Link>

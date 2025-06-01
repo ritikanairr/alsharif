@@ -29,7 +29,7 @@ const Services = () => {
             <h2 className="text-2xl font-bold mb-6">Shipping Agency</h2>
             <div className="mb-6">
               <img
-                src="/images/shipping-agency-large.jpg"
+                src="/images/shipag.png"
                 alt="Shipping Agency Services"
                 className="w-full rounded-lg mb-6"
               />
@@ -62,7 +62,7 @@ const Services = () => {
             <h2 className="text-2xl font-bold mb-6">Freight Forwarding</h2>
             <div className="mb-6">
               <img
-                src="/images/freight-forwarding-large.jpg"
+                src="/images/freight.png"
                 alt="Freight Forwarding Services"
                 className="w-full rounded-lg mb-6"
               />
@@ -92,7 +92,7 @@ const Services = () => {
       default:
         return (
           <div className="text-center py-10">
-            <p>Please select a service from the sidebar.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         );
     }

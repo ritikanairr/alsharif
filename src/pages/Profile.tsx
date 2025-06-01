@@ -5,14 +5,12 @@ import { useParams, Link } from 'react-router-dom';
 const Profile = () => {
   const { section } = useParams<{ section: string }>();
   
-  // Set default section if none is specified
   useEffect(() => {
     if (!section) {
       window.history.replaceState({}, '', '/profile/group');
     }
   }, [section]);
 
-  // Sidebar navigation links
   const sidebarLinks = [
     { id: 'group', label: 'The Group' },
     { id: 'heritage', label: 'Our Heritage' },
@@ -21,7 +19,6 @@ const Profile = () => {
     { id: 'quality', label: 'Quality Policy' },
   ];
 
-  // Content based on section
   const renderContent = () => {
     switch (section) {
       case 'group':
@@ -30,7 +27,7 @@ const Profile = () => {
             <h2 className="text-2xl font-bold mb-6">The Group</h2>
             <div className="mb-6">
               <img 
-                src="/images/al-sharif-building.jpg" 
+                src="/images/building.jpg" 
                 alt="Al Sharif Holdings Building" 
                 className="w-full rounded-lg mb-6"
               />
@@ -55,27 +52,26 @@ const Profile = () => {
             <h2 className="text-2xl font-bold mb-6">Our Heritage</h2>
             <div className="mb-6">
               <img 
-                src="/images/heritage.jpg" 
+                src="/images/heritage.png" 
                 alt="Al Sharif Heritage" 
                 className="w-full rounded-lg mb-6"
               />
             </div>
             <p className="mb-4">
-              With a legacy dating back to 1890, Al Sharif Group carries a rich heritage of maritime excellence and trusted service in the Kingdom of Bahrain. Our story began with a vision to establish a reliable shipping service that would connect Bahrain to the world.
+              Al Sharif Group’s journey dates back to the 1890s. From a humble beginning our visionary leader has led us to where we are today, as a leader in the shipping industry in the Kingdom of Bahrain.
             </p>
             <p className="mb-4">
-              Through generations, we have upheld the founding principles of integrity, reliability, and excellence. Each era has added a new dimension to our services while maintaining our core values.
+              The Al Sharif family has laid the foundation for Al Sharif Shipping Services which still remain as one of the oldest shipping companies in Bahrain and have played a prominent role in the Kingdom’s burgeoning trade industry.
             </p>
             <p>
-              Today, we continue to honor our heritage by combining traditional values with modern innovations, ensuring that Al Sharif Group remains at the forefront of the shipping and logistics industry in the region.
+              Later in 1957 the Group was commercially established as a full-fledged Liner Shipping Agency which diversified into ocean and airfreight forwarding, and other allied services which is the backbone of the industry. Meticulous management skills, hard work and dedication coupled with experienced professionals across generations have ensured that we continue to deliver superior services to our principals and customers.
             </p>
           </div>
         );
-      // Add other profile sections as needed
       default:
         return (
           <div className="text-center py-10">
-            <p>Please select a section from the sidebar.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         );
     }

@@ -1,11 +1,27 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
+  const fadeUpVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   return (
     <section id="contact" className="py-20 bg-slate-50 mt-6">
       <div className="container mx-auto px-4">
-        <div className="text-left mb-16">
+
+        {/* Animate the heading block */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUpVariant}
+          className="text-left mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-slate-800 font-Futura">Contact Us</span>
           </h2>
@@ -13,65 +29,88 @@ const Contact = () => {
           <p className="text-xl text-slate-600 max-w-3xl font-Futura">
             Ready to ship with Al-Sharif? Contact us for a personalized quote or any shipping inquiries
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        {/* Animate the main content grid */}
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUpVariant}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+        >
           {/* Contact Information */}
           <div className="space-y-8">
+            {/* Repeat your contact info blocks here as before */}
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center">
-                <MapPin className="w-6 h-6" style={{ color: '#000000' }} />
+                <MapPin className="w-6 h-6" style={{ color: "#000000" }} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">Our Location</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">
+                  Our Location
+                </h3>
                 <p className="text-slate-600 font-Futura">
-                  Al Sharif Holdings Building,<br />
-                  Bldg No. 1315A, Road 114, Block 101, Hidd,<br />
-                  Bahrain Investment Gateway Island,<br/>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4">
-              <div
-                className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center">
-                <Phone className="w-6 h-6" style={{ color: '#000000' }} />
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">Phone Numbers</h3>
-                <p className="text-slate-600 font-Futura">
-                  Main Office: +973 1234 5678<br />
-                  Customer Service: +973 8765 4321<br />
-                  Emergency: +973 9999 0000
+                  Al Sharif Holdings Building,
+                  <br />
+                  Bldg No. 1315A, Road 114, Block 101, Hidd,
+                  <br />
+                  Bahrain Investment Gateway Island,
+                  <br />
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center">
-                <Mail className="w-6 h-6" style={{ color: '#000000' }} />
+                <Phone className="w-6 h-6" style={{ color: "#000000" }} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">Email</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">
+                  Phone Numbers
+                </h3>
                 <p className="text-slate-600 font-Futura">
-                  info@alsharifbahrain.com<br />
-                  sales@alsharifbahrain.com<br />
+                  Main Office: +973 1234 5678
+                  <br />
+                  Customer Service: +973 8765 4321
+                  <br />
+                  +973 9999 0000
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center">
+                <Mail className="w-6 h-6" style={{ color: "#000000" }} />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">
+                  Email
+                </h3>
+                <p className="text-slate-600 font-Futura">
+                  info@alsharifbahrain.com
+                  <br />
+                  sales@alsharifbahrain.com
+                  <br />
                   support@alsharifbahrain.com
                 </p>
               </div>
             </div>
 
             <div className="flex items-start space-x-4">
-              <div
-                className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center">
-                <Clock className="w-6 h-6" style={{ color: '#000000' }} />
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center">
+                <Clock className="w-6 h-6" style={{ color: "#000000" }} />
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">Business Hours</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2 font-Futura">
+                  Business Hours
+                </h3>
                 <p className="text-slate-600 font-Futura">
-                  Sunday - Thursday: 8:00 AM - 6:00 PM<br />
-                  Friday: Closed <br />
-                  Saturday: 
+                  Sunday - Thursday: 8:00 AM - 6:00 PM
+                  <br />
+                  Friday: Closed
+                  <br />
+                  Saturday:
                 </p>
               </div>
             </div>
@@ -92,7 +131,7 @@ const Contact = () => {
               ></iframe>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

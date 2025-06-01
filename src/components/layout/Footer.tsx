@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="relative text-white pt-12 pb-6 overflow-hidden font-Futura">
       {/* Background Layer */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-black"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[#172323] font-Futura"
       ></div>
 
       {/* Content Layer */}
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-sharif-red text-2xl font-bold mb-4">Al Sharif Group</h3>
+            <h3 className="text-gray-50 text-2xl font-bold mb-4">Al Sharif Group</h3>
             <div className="space-y-2 text-gray-300">
               <p className="flex items-start">
                 <span className="mr-2">Phone:</span>
