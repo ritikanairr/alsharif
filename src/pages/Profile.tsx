@@ -188,12 +188,11 @@ const Profile = () => {
       case 'quality':
         return (
           <div className="animate-fade-in">
-            <h1 className="text-2xl font-Futura font-bold mb-6">Quality Assurance</h1>
+            <h1 className="text-2xl font-Futura font-bold mb-6 ">Quality Assurance</h1>
             <div className="mb-6 font-Roboto">
               <img 
                 src="/images/quality.png" 
-                alt="Al Sharif Holdings Building" 
-                className="w-[600px] rounded-2xl mb-6"
+                className="w-[600px] h-[400px] rounded-2xl mb-6"
               />
             </div>
             <p className="mb-4 text-gray-700 ">
