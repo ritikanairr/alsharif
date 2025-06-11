@@ -24,15 +24,16 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: "url('/images/heroshippp.jpg')" }}
       />
 
-      {/* Content above background */}
-      <div className="relative z-10 flex flex-col items-center justify-start min-h-screen text-center px-4 pt-[340px]">
+      {/* Foreground Content */}
+      <div className="relative z-10 flex flex-col items-center justify-start min-h-screen text-center px-4 pt-[300px] sm:pt-[340px] md:pt-[340px] lg:pt-[340px]">
         <motion.h1
-          className="text-white text-6xl font-Futura leading-tight"
+          className="text-white font-Futura font-bold leading-tight tracking-wide text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] max-w-[90%] sm:max-w-[80%] md:max-w-none"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -42,10 +43,10 @@ const Hero = () => {
           <b>LEADERS IN MARITIME <br /> SOLUTIONS AND SERVICES</b>
         </motion.h1>
 
-        {/* Clickable Learn More section */}
+        {/* Learn More Button */}
         <motion.div
           onClick={scrollToNextSection}
-          className="absolute bottom-10 cursor-pointer text-white text-center select-none"
+          className="absolute bottom-8 sm:bottom-10 cursor-pointer text-white text-center select-none"
           animate={{ y: [0, -15, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
           role="button"
@@ -54,8 +55,8 @@ const Hero = () => {
             if (e.key === 'Enter' || e.key === ' ') scrollToNextSection();
           }}
         >
-          <p className="text-sm font-light">Learn More</p>
-          <ArrowDown size={32} className="mx-auto mt-1" />
+          <p className="text-xs sm:text-sm font-light">Learn More</p>
+          <ArrowDown size={28} className="mx-auto mt-1 sm:size-8" />
         </motion.div>
       </div>
     </section>
