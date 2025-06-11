@@ -59,7 +59,7 @@ const About = () => {
           <motion.img
             src="/images/about.png"
             alt="About Al Sharif Group"
-            className="absolute top-[40px] left-[80px] right-[-158px] bottom-[30px] w-full h-full object-contain"
+            className="absolute top-[40px] left-[110px] right-[-170px] bottom-[30px] w-full h-full object-contain"
             variants={fadeUp}
             transition={{ duration: 0.8, delay: 0.6 }}
           />

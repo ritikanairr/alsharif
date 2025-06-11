@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center bg-white/90 border-black border-2 backdrop-blur-sm rounded-2xl px-4 py-1">
-            <div className="w-[170px] h-9 mr-2 ">
+            <div className="w-[290px] h-[53px] mr-2 ">
               <img src="/images/alsharif.png" alt="Al Sharif Group Flag Logo" className="w-full h-full object-cover" />
             </div>
           </Link>

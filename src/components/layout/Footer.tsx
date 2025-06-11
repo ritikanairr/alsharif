@@ -1,18 +1,43 @@
 import { Link } from 'react-router-dom';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const Footer = () => {
+  // Refs for each section to detect when they enter viewport
+  const companyRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const companyInView = useInView(companyRef, { once: true, margin: '-100px' });
+  const servicesInView = useInView(servicesRef, { once: true, margin: '-100px' });
+  const contactInView = useInView(contactRef, { once: true, margin: '-100px' });
+
+  // Common animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
+  };
+
   return (
     <footer className="relative text-white pt-12 pb-6 overflow-hidden font-Futura">
       {/* Background Layer */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[#172323] font-Futura"
+        aria-hidden="true"
       ></div>
 
       {/* Content Layer */}
       <div className="relative container mx-auto px-4 z-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
           {/* Company Info */}
-          <div className="space-y-4">
+          <motion.div
+            ref={companyRef}
+            initial="hidden"
+            animate={companyInView ? 'visible' : 'hidden'}
+            variants={fadeUp}
+            className="space-y-4"
+          >
             <h3 className="text-gray-50 text-2xl font-bold mb-4">Al Sharif Group</h3>
             <div className="space-y-2 text-gray-300">
               <p className="flex items-start">
@@ -30,10 +55,15 @@ const Footer = () => {
                 </a>
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Services Links */}
-          <div>
+          <motion.div
+            ref={servicesRef}
+            initial="hidden"
+            animate={servicesInView ? 'visible' : 'hidden'}
+            variants={fadeUp}
+          >
             <h3 className="text-white text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
@@ -62,10 +92,15 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Info */}
-          <div>
+          <motion.div
+            ref={contactRef}
+            initial="hidden"
+            animate={contactInView ? 'visible' : 'hidden'}
+            variants={fadeUp}
+          >
             <h3 className="text-white text-lg font-semibold mb-4">Contact us</h3>
             <address className="not-italic text-gray-300 space-y-2">
               <p>Al Sharif Group W.L.L.</p>
@@ -75,7 +110,8 @@ const Footer = () => {
               <p>Bahrain Investment Gateway Island,</p>
               <p>Kingdom of Bahrain.</p>
             </address>
-          </div>
+          </motion.div>
+
         </div>
 
         {/* Copyright */}
