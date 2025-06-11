@@ -41,15 +41,16 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-         <ScrollToTop />
-          <div className="flex flex-col min-h-screen">
+          <ScrollToTop />
+          {/* Ensures full-height layout with flex structure */}
+          <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
             <Navbar />
-            <main className="flex-grow">
+            <main className="flex-grow w-full">
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/profile/:section" element={<Profile />} />
-                <Route path="/services" element={<Services />} /> 
+                <Route path="/services" element={<Services />} />
                 <Route path="/services/:service" element={<Services />} />
                 <Route path="/contact:" element={<ServiceCTA />} />
                 <Route path="/accreditations" element={<Accreditations />} />

@@ -6,6 +6,8 @@ const Navbar = () => {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const profileItems = [
     { label: 'The Group', href: '/profile/group' },
@@ -28,17 +30,21 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      const currentY = window.scrollY;
+      setScrolled(currentY > 50);
+      setShowNavbar(currentY < lastScrollY || currentY < 10);
+      setLastScrollY(currentY);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 transform ${
         scrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : ''
-      }`}
+      } ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
@@ -102,7 +108,7 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Toggle */}
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -136,16 +142,10 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Nav */}
+        {/* Mobile Menu */}
         {menuOpen && (
           <div className="mt-4 flex flex-col bg-white/90 backdrop-blur-sm rounded-lg p-4 space-y-4 md:hidden border border-black">
-            <Link
-              to="/"
-              onClick={() => setMenuOpen(false)}
-              className={`font-bold text-black hover:text-sharif-red ${
-                isActive('/') ? 'text-sharif-red' : ''
-              }`}
-            >
+            <Link to="/" onClick={() => setMenuOpen(false)} className={`font-bold text-black hover:text-sharif-red ${isActive('/') ? 'text-sharif-red' : ''}`}>
               Home
             </Link>
             <div>
@@ -181,27 +181,21 @@ const Navbar = () => {
             <Link
               to="/accreditations"
               onClick={() => setMenuOpen(false)}
-              className={`font-bold text-black hover:text-sharif-red ${
-                isActive('/accreditations') ? 'text-sharif-red' : ''
-              }`}
+              className={`font-bold text-black hover:text-sharif-red ${isActive('/accreditations') ? 'text-sharif-red' : ''}`}
             >
               Accreditations
             </Link>
             <Link
               to="/related-info"
               onClick={() => setMenuOpen(false)}
-              className={`font-bold text-black hover:text-sharif-red ${
-                isActive('/related-info') ? 'text-sharif-red' : ''
-              }`}
+              className={`font-bold text-black hover:text-sharif-red ${isActive('/related-info') ? 'text-sharif-red' : ''}`}
             >
               Related Info
             </Link>
             <Link
               to="/contact-us"
               onClick={() => setMenuOpen(false)}
-              className={`font-bold text-black hover:text-sharif-red ${
-                isActive('/contact-us') ? 'text-sharif-red' : ''
-              }`}
+              className={`font-bold text-black hover:text-sharif-red ${isActive('/contact-us') ? 'text-sharif-red' : ''}`}
             >
               Contact Us
             </Link>
