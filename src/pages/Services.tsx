@@ -27,7 +27,7 @@ const Services = () => {
       <div className="animate-fade-in">
         <h2 className="text-2xl font-bold mb-6 font-Futura">Shipping Agency</h2>
         <div className="mb-6">
-          <img src="/images/age.jpg" alt="Shipping Agency Services" className="w-full h-auto rounded-2xl mb-6" />
+          <img src="/images/age.jpg" alt="Shipping Agency Services" className="w-[700px] h-[400px] rounded-2xl mb-6" />
         </div>
         <p className="mb-4 text-gray-700">
           Our vast experience has taught and prepared our teams to offer the best agency services to our principals, offering a complete solution a ship may need while she is calling Bahrain.
@@ -61,7 +61,7 @@ const Services = () => {
       <div className="animate-fade-in">
         <h2 className="text-2xl font-bold mb-6 font-Futura">Freight Forwarding</h2>
         <div className="mb-6">
-          <img src="/images/freight.png" alt="Freight Forwarding Services" className="w-full rounded-lg mb-6" />
+          <img src="/images/freight.png" alt="Freight Forwarding Services" className="w-[700px] h-[400px] rounded-2xl mb-6" />
         </div>
         <p className="mb-4 text-gray-700">
           Our services include total door-to-door logistics solutions for all our customers...
@@ -80,13 +80,77 @@ const Services = () => {
       </div>
     ),
     'ship-chandling': (
-      <div className="animate-fade-in text-center py-10 text-gray-600">Content for Ship Chandling coming soon.</div>
+      <div className="animate-fade-in">
+        <h2 className="text-2xl font-bold mb-6 font-Futura">Ship Chandling</h2>
+        <div className="mb-6">
+          <img src="/images/chandlingg.jpg" alt="Freight Forwarding Services" className="w-[700px] h-[400px] rounded-2xl mb-6" />
+        </div>
+        <p className="mb-4 text-gray-700">
+          Our sincere thanks goes to some of our very long standing and supportive customers and principals. Our distinguished feature is time and again we are always able to meet any kind of requirements with the shortest notice 24/7.
+        </p>
+        <p className="mb-4 text-gray-700">
+          Our ship chandling division, Mohamed Taher Al Sharif, started its operations in 1929 and has the distinction of being the first specialized stevedoring and ship chandling company in the Kingdom of Bahrain. Over the years, the company has been serving various types of vessels including oil tankers, dredgers, LPG carriers, general cargo vessels and navy vessels.
+          
+          </p>
+          <h3 className="text-xl font-semibold mb-3 mt-6">Our major services: </h3>
+        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+          <li>Supply of Safety, Marine,  Industrial & Chemical Products</li>
+          <li>Medicines</li>
+          <li>Provision ( dry, wet, chilled & frozen )  and  Bonded Stores</li>
+          <li>Catering Services to ships</li>
+          <li>Freshwater Bulk by Road Tanker or Barge </li>
+          <li>Garbage Removal</li>
+          <li>Sludge Removal</li>
+          <li>Calibration Services</li>
+          <li>Motor Rewinding  and Transformer Recoiling</li>
+          <li>Mechanical & Steel Fabrication</li>
+          <li>B A Charts & Publications</li>
+          <li>Lube Oil / Marine Lubricants</li>
+          <li>Under Water inspections</li>
+        </ul>
+          
+          
+          </div>
     ),
     'ships-support': (
-      <div className="animate-fade-in text-center py-10 text-gray-600">Content for Ship's Support Services coming soon.</div>
+      <div className="animate-fade-in">
+        <h2 className="text-2xl font-bold mb-6 font-Futura">Ship Chandling</h2>
+        <div className="mb-6">
+          <img src="/images/supportt.jpg" alt="Freight Forwarding Services" className="w-[700px] h-[400px] rounded-2xl mb-6" />
+        </div>
+        <p className="mb-4 text-gray-700">
+          Support services are another one of our specialties where leading global shipping principals have chosen us as their preferred local partner for offering support services. Our services enable operators to achieve quick turnarounds to effectively meet their schedules while enjoying top-class services which include crew changes, visa processing, medical support, survey arrangements, launch services, certificates renewal, arrangement of slops and much more.
+        </p>
+       
+          <h3 className="text-xl font-semibold mb-3 mt-6">Some of our services:</h3>
+        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+          <li>Crew Changes</li>
+          <li>Visa Processing</li>
+          <li>E-Tickets</li>
+          <li>Transportation</li>
+          <li>Hotel Booking</li>
+          <li>Medical Support </li>
+          <li>Cash to Master</li>
+          <li>Spares Delivery</li>
+          <li>Bunker Coordination</li>
+          <li>Provisions & Store Supplies </li>
+          <li>Supplies Coordination & Arrangement </li>
+          <li>Survey Arrangements</li>
+          <li>Dry Dock Vessel Assistance and much more...</li>
+        </ul>
+          
+          
+          </div>
     ),
     'stevedoring': (
-      <div className="animate-fade-in text-center py-10 text-gray-600">Content for Stevedoring Services coming soon.</div>
+      <div className="animate-fade-in">
+        <h2 className="text-2xl font-bold mb-6 font-Futura">Stevedoring</h2>
+        <div className="mb-6">
+          <img src="/images/roro.webp" alt="Freight Forwarding Services" className="w-[700px] h-[400px] rounded-2xl mb-6" />
+        </div>
+        <p className="mb-4 text-gray-700">
+          Reliable and efficient teams of professionals handle any complex operation with precision and ease. Time tested set of reliable operational mechanisms ably supported by a team of dedicated professionals ensures a high level of customer satisfaction on a daily basis. To ensure  we meet our customers' expectations every single time, our stevedoring team diligently operates round the clock to conveniently discharge or load cargo from ships. Our onsite team of drivers, tally clerks are ably supervised and guided throughout the operations.
+        </p></div>
     ),
   };
 
