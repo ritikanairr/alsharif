@@ -133,8 +133,8 @@ const ShipCanvas = () => {
   });
 
   return (
-    <div className="h-[150vh] bg-[#008576]">
-      <div className="sticky top-0 h-[150vh] w-full overflow-hidden touch-none">
+    <div className="h-[100vh] md:h-[150vh] bg-[#008576]">
+      <div className="sticky top-0 h-[100vh] md:h-[150vh] w-full overflow-hidden touch-none">
         <div className="relative w-full h-full">
           <Canvas camera={{ position: [0, 5, 30], fov: 45 }}>
             <ambientLight intensity={0.6} />
@@ -163,7 +163,8 @@ const ShipCanvas = () => {
             />
 
             <div className="relative">
-              <div className="absolute left-2.5 md:left-[24.3px] top-0 bottom-0 w-0.5 bg-black z-0"></div>
+              {/* Aligned Vertical Line */}
+              <div className="absolute left-[14px] sm:left-[18px] md:left-[24px] top-0 bottom-0 w-0.5 bg-black z-0"></div>
 
               <div className="space-y-6 md:space-y-8">
                 {serviceData.map((service) => {
@@ -181,7 +182,8 @@ const ShipCanvas = () => {
                       animate={itemInView ? "visible" : "hidden"}
                       className="relative flex items-start"
                     >
-                      <div className="z-10 w-4 h-4 bg-black rounded-full flex-shrink-0 relative left-2.5 md:left-[18px]"></div>
+                      {/* Aligned Dot */}
+                      <div className="z-10 w-4 h-4 bg-black rounded-full flex-shrink-0 relative left-[7px] sm:left-[11px] md:left-[17px]"></div>
 
                       <div className="ml-6 md:ml-8 flex-grow">
                         <div className="bg-white p-3 md:p-4 rounded-2xl shadow-md max-w-xs md:max-w-md">
@@ -203,7 +205,7 @@ const ShipCanvas = () => {
               </div>
             </div>
 
-            <div className="mt-6 flex justify-center bg-red">
+            <div className="mt-6 flex justify-center">
               <button
                 onClick={() => navigate('/services')}
                 className="bg-[#4E8A77] text-white text-lg font-medium py-2 px-6 font-Futura rounded-full hover:bg-gray-200 transition"

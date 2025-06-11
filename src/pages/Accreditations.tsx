@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const Accreditations = () => {
   const accreditations = [
     {
@@ -41,13 +43,20 @@ const Accreditations = () => {
   return (
     <div className="container mx-auto pt-24 px-4 py-12 font-Futura">
       <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-slate-800 font-Futura">Accreditations & Memberships</span>
-          </h2>
-          <div className="h-[4px] w-[80%] bg-black mb-8"></div>
+        <span className="text-slate-800 font-Futura">Accreditations & Memberships</span>
+      </h2>
+      <div className="h-[4px] w-[80%] bg-black mb-8"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-        {accreditations.map((item) => (
-          <div key={item.id} className="perspective w-full h-64">
+        {accreditations.map((item, index) => (
+          <motion.div
+            key={item.id}
+            className="perspective w-full h-64"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
             <div className="card w-full h-full rounded-lg shadow-lg bg-white">
               <div className="card-inner">
                 {/* Front */}
@@ -62,7 +71,7 @@ const Accreditations = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
