@@ -14,7 +14,7 @@ import Footer from "./components/layout/Footer";
 // Pages
 import Index from "./pages/Index";
 import Profile from "./pages/Profile";
-import Services from "./pages/Services"; // ✅ Services will handle its own <Canvas> internally
+import Services from "./pages/Services"; 
 import Accreditations from "./pages/Accreditations";
 import RelatedInfo from "./pages/RelatedInfo";
 import ContactUs from "./pages/ContactUs";
